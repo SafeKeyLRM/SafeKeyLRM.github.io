@@ -366,7 +366,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
       </div>
       <!-- 总的figcaption -->
       <figcaption style="text-align: center;">
-        Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Data statistics for multimodal situational safety categories with percentages.
+        The overall structure of the chat data collection pipeline (left) and examples of two multimodal assistant scenarios (right). The pipeline includes four parts: (1) Generating Intented Activity and Unsafe Textual Situations. (2) Iterative Filtering with LLM. (3) Constructing a Multimodal Situational Safety Dataset via Image Retrieval. (4) Human Verification \& Query Generation. 
       </figcaption>
     </figure>
   </div>
@@ -384,49 +384,9 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
       loading="lazy"
     />
     <figcaption style="text-align: center;">
-      Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
+      Accuracy of MLLMs under instruction following setting. All of the MLLMs struggle to respond with safety awareness under unsafe situations and perform even worse in Embodied Task.
     </figcaption>
   </figure>
-</section>
-
-
-
-<section class="section">
-  <div class="columns is-centered" style="margin-bottom: 10rem;">
-    <!-- 左侧图片 -->
-    <div class="column is-half" style="text-align: center;">
-      <figure class="image">
-        <img 
-          src="./static/agent_chat.png" 
-          srcset="./static/agent_chat-small.png 600w, ./static/agent_chat-medium.png 1200w, ./static/agent_chat-large.png 2000w" 
-          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
-          alt="image" 
-          style="width: 100%; height: auto;" 
-          loading="lazy"
-        />
-        <figcaption style="text-align: center;">
-          Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly.
-        </figcaption>
-      </figure>
-    </div>
-    
-    <!-- 右侧图片 -->
-    <div class="column is-half" style="text-align: center;">
-      <figure class="image">
-        <img 
-          src="./static/agent_embodied.png" 
-          srcset="./static/agent_embodied-small.png 600w, ./static/agent_embodied-medium.png 1200w, ./static/agent_embodied-large.png 2000w" 
-          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
-          alt="image" 
-          style="width: 100%; height: auto;" 
-          loading="lazy"
-        />
-        <figcaption style="text-align: center;">
-          Data statistics for multimodal situational safety categories with percentages.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
 </section>
 
 
@@ -444,7 +404,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Illustration of multimodal situational safety.
+          Chat task safe situations.
         </figcaption>
       </figure>
     </div>
@@ -459,7 +419,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Data statistics for multimodal situational safety categories.
+          Chat task unsafe situations.
         </figcaption>
       </figure>
     </div>
@@ -474,7 +434,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Description for third image.
+          Chat task average.
         </figcaption>
       </figure>
     </div>
@@ -493,7 +453,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Description for fourth image.
+           Embodied task safe situations.
         </figcaption>
       </figure>
     </div>
@@ -508,7 +468,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Description for fifth image.
+        Embodied task unsafe situations.
         </figcaption>
       </figure>
     </div>
@@ -523,7 +483,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
           loading="lazy" 
         />
         <figcaption style="text-align: center;">
-          Description for sixth image.
+         Embodied task average.
         </figcaption>
       </figure>
     </div>
@@ -543,14 +503,46 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
       loading="lazy" 
     />
     <figcaption style="text-align: center;">
-      Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
+      Workflow of our Multi-Agent framework for enhancing situational safety in user queries, incorporating Intent Reasoning, Safety Judgment, QA and Visual Understanding agents.
     </figcaption>
   </figure>
 </section>
 
 
-
-
+<section class="section">
+  <div class="columns is-centered" style="margin-bottom: 10rem;">
+    <!-- 左侧图片 -->
+    <div class="column is-half" style="text-align: center;">
+      <figure class="image">
+        <img 
+          src="./static/agent_chat.png" 
+          srcset="./static/agent_chat-small.png 600w, ./static/agent_chat-medium.png 1200w, ./static/agent_chat-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy"
+        />
+    </div>
+    
+    <!-- 右侧图片 -->
+    <div class="column is-half" style="text-align: center;">
+      <figure class="image">
+        <img 
+          src="./static/agent_embodied.png" 
+          srcset="./static/agent_embodied-small.png 600w, ./static/agent_embodied-medium.png 1200w, ./static/agent_embodied-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy"
+        />
+    </div>
+  </div>
+  <figcaption style="text-align: center;">
+    MLLM's performance on our benchmark with three reasoning settings. Base setting: without explicit safety reasoning. 1 step CoT: MLLMs reasoning the safety of user query and generating response at one step. Multi-agent: our designed multi-agent pipeline. The results show that the multi-agent pipeline improves performance in most cases.
+  </figcaption>
+  </figure>
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">
