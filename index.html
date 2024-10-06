@@ -434,12 +434,20 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
 
 <section class="section">
   <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
-    <img src="./static/table2.png" alt="image" style="width: 100%; height: auto;" loading="lazy" />
+    <img 
+      src="./static/table2.png" 
+      srcset="./static/table2-small.png 600w, ./static/table2-medium.png 1200w, ./static/table2.png 2000w"
+      sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+      alt="image"
+      style="width: 100%; height: auto;" 
+      loading="lazy" 
+    />
     <figcaption style="text-align: center;">
       Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
     </figcaption>
   </figure>
 </section>
+
   
 
 
