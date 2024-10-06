@@ -249,12 +249,21 @@
 
 
 <section class="section">
-  <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;" loading="lazy">
-    <img src="./static/fig1.png" alt="image" style="width: 100%; height: auto;" />
+  <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
+    <img 
+      src="./static/fig1.png" 
+      srcset="./static/fig1-small.png 600w, ./static/fig1-medium.png 1200w, ./static/fig1-large.png 2000w" 
+      sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+      alt="image" 
+      style="width: 100%; height: auto;" 
+      loading="lazy" 
+    />
     <figcaption style="text-align: center;">
       Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
     </figcaption>
   </figure>
+</section>
+
 
 
   <div class="container is-max-desktop">
@@ -284,19 +293,34 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
         
   <section class="section">
   <div class="columns is-centered" style="margin-bottom: 10rem;">
+    <!-- 左侧图片 -->
     <div class="column is-half" style="text-align: center;">
       <figure class="image">
-        <img src="./static/category.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+        <img 
+          src="./static/category.png" 
+          srcset="./static/category-small.png 600w, ./static/category-medium.png 1200w, ./static/category-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;"  
+          loading="lazy"
+        />
         <figcaption style="text-align: center;">
           Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly.
         </figcaption>
       </figure>
     </div>
     
+    <!-- 右侧图片 -->
     <div class="column is-half" style="text-align: center;">
       <figure class="image">
-<!--         <img src="./static/static.png" alt="image" style="width: 100%; height: auto;" /> -->
-         <img src="./static/static.png" alt="image" style="width: 130%; height: 380px;"  loading="lazy"/>
+        <img 
+          src="./static/static.png" 
+          srcset="./static/static-small.png 600w, ./static/static-medium.png 1200w, ./static/static-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;"  
+          loading="lazy"
+        />
         <figcaption style="text-align: center;">
           Data statistics for multimodal situational safety categories with percentages.
         </figcaption>
@@ -306,22 +330,38 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
 </section>
 
 
+
 <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
   <div class="column is-four-fifths">
     <h2 class="title is-3">Data Collection</h2>
   </div>
 </div>
+    
 <section class="section">
   <div class="columns is-centered" style="margin-bottom: 10rem;">
     <figure class="image" style="width: 100%;">
       <div class="columns">
         <!-- 左侧图片占 68% 宽度 -->
         <div class="column is-8" style="text-align: center;">
-          <img src="./static/pipline_overall.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+          <img 
+            src="./static/pipline_overall.png" 
+            srcset="./static/pipline_overall-small.png 600w, ./static/pipline_overall-medium.png 1200w, ./static/pipline_overall-large.png 2000w"
+            sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+            alt="image" 
+            style="width: 100%; height: auto;" 
+            loading="lazy"
+          />
         </div>
         <!-- 右侧图片占 32% 宽度 -->
         <div class="column is-4" style="text-align: center;">
-          <img src="./static/pipline_example.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+          <img 
+            src="./static/pipline_example.png" 
+            srcset="./static/pipline_example-small.png 600w, ./static/pipline_example-medium.png 1200w, ./static/pipline_example-large.png 2000w"
+            sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+            alt="image" 
+            style="width: 100%; height: auto;" 
+            loading="lazy"
+          />
         </div>
       </div>
       <!-- 总的figcaption -->
@@ -332,36 +372,62 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   </div>
 </section>
 
+
 <section class="section">
- <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;"  loading="lazy">
-    <img src="./static/table1.png" alt="image" style="width: 100%; height: auto;" />
+  <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
+    <img 
+      src="./static/table1.png" 
+      srcset="./static/table1-small.png 600w, ./static/table1-medium.png 1200w, ./static/table1-large.png 2000w"
+      sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+      alt="image" 
+      style="width: 100%; height: auto;" 
+      loading="lazy"
+    />
     <figcaption style="text-align: center;">
       Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
     </figcaption>
-  </figure>       
+  </figure>
+</section>
+
 
 
 <section class="section">
   <div class="columns is-centered" style="margin-bottom: 10rem;">
+    <!-- 左侧图片 -->
     <div class="column is-half" style="text-align: center;">
       <figure class="image">
-        <img src="./static/agent_chat.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+        <img 
+          src="./static/agent_chat.png" 
+          srcset="./static/agent_chat-small.png 600w, ./static/agent_chat-medium.png 1200w, ./static/agent_chat-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy"
+        />
         <figcaption style="text-align: center;">
           Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly.
         </figcaption>
       </figure>
     </div>
     
+    <!-- 右侧图片 -->
     <div class="column is-half" style="text-align: center;">
       <figure class="image">
-        <img src="./static/agent_embodied.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+        <img 
+          src="./static/agent_embodied.png" 
+          srcset="./static/agent_embodied-small.png 600w, ./static/agent_embodied-medium.png 1200w, ./static/agent_embodied-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy"
+        />
         <figcaption style="text-align: center;">
           Data statistics for multimodal situational safety categories with percentages.
         </figcaption>
       </figure>
     </div>
   </div>
-</section>  
+</section>
 
 
 <section class="section">
@@ -369,7 +435,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   <div class="columns is-centered" style="margin-bottom: 2rem;">
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/chat_safe.png" alt="image" style="width: 100%; height: auto;"  loading="lazy" />
+        <img 
+          src="./static/chat_safe.png" 
+          srcset="./static/chat_safe-small.png 600w, ./static/chat_safe-medium.png 1200w, ./static/chat_safe-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Illustration of multimodal situational safety.
         </figcaption>
@@ -377,7 +450,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
     </div>
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/chat_unsafe.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+        <img 
+          src="./static/chat_unsafe.png" 
+          srcset="./static/chat_unsafe-small.png 600w, ./static/chat_unsafe-medium.png 1200w, ./static/chat_unsafe-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Data statistics for multimodal situational safety categories.
         </figcaption>
@@ -385,7 +465,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
     </div>
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/chat_avg.png" alt="image" style="width: 100%; height: auto;"  loading="lazy"/>
+        <img 
+          src="./static/chat_avg.png" 
+          srcset="./static/chat_avg-small.png 600w, ./static/chat_avg-medium.png 1200w, ./static/chat_avg-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Description for third image.
         </figcaption>
@@ -397,7 +484,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   <div class="columns is-centered" style="margin-bottom: 2rem;">
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/e_safe.png" alt="image" style="width: 100%; height: auto;"  loading="lazy" />
+        <img 
+          src="./static/e_safe.png" 
+          srcset="./static/e_safe-small.png 600w, ./static/e_safe-medium.png 1200w, ./static/e_safe-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Description for fourth image.
         </figcaption>
@@ -405,7 +499,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
     </div>
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/e_unsafe.png" alt="image" style="width: 100%; height: auto;"  loading="lazy" />
+        <img 
+          src="./static/e_unsafe.png" 
+          srcset="./static/e_unsafe-small.png 600w, ./static/e_unsafe-medium.png 1200w, ./static/e_unsafe-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Description for fifth image.
         </figcaption>
@@ -413,7 +514,14 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
     </div>
     <div class="column is-4" style="text-align: center;">
       <figure class="image">
-        <img src="./static/e_avg.png" alt="image" style="width: 100%; height: auto;"  loading="lazy" />
+        <img 
+          src="./static/e_avg.png" 
+          srcset="./static/e_avg-small.png 600w, ./static/e_avg-medium.png 1200w, ./static/e_avg-large.png 2000w" 
+          sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
+          alt="image" 
+          style="width: 100%; height: auto;" 
+          loading="lazy" 
+        />
         <figcaption style="text-align: center;">
           Description for sixth image.
         </figcaption>
@@ -422,23 +530,15 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   </div>
 </section>
 
-<section class="section">
-  <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
-    <img src="./static/agent.png" alt="image" style="width: 100%; height: auto;" loading="lazy" />
-    <figcaption style="text-align: center;">
-      Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
-    </figcaption>
-  </figure>
-</section>
 
 
 <section class="section">
   <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
     <img 
-      src="./static/table2.png" 
-      srcset="./static/table2-small.png 600w, ./static/table2-medium.png 1200w, ./static/table2.png 2000w"
-      sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw"
-      alt="image"
+      src="./static/agent.png" 
+      srcset="./static/agent-small.png 600w, ./static/agent-medium.png 1200w, ./static/agent-large.png 2000w" 
+      sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px, 100vw" 
+      alt="image" 
       style="width: 100%; height: auto;" 
       loading="lazy" 
     />
@@ -448,7 +548,9 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   </figure>
 </section>
 
-  
+
+
+
 
 
 <section class="section" id="BibTeX">
