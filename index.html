@@ -363,7 +363,13 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   </div>
 </section>
 
-
+    
+<div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Result Diagnosis</h2>
+      </div>
+      </div>
+    
 <section class="section">
   <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
     <img 
@@ -468,7 +474,12 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
 </section>
 
 
-
+<div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Multi-Agent System For Better Safety Reasoning</h2>
+      </div>
+      </div>
+    
 <section class="section">
   <figure class="image is-centered" style="width: 65%; margin: 0 auto 6rem; text-align: center;">
     <img 
@@ -482,6 +493,55 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
     </figcaption>
   </figure>
 </section>
+
+
+<!-- 固定布局的图片展示，不使用响应式 -->
+<section class="section">
+  <div class="columns" style="margin-bottom: 10rem;">
+    <!-- 左侧图片 -->
+    <div class="column" style="text-align: center; width: 50%;">
+      <figure class="image" style="margin: 0 auto;">
+        <img 
+          src="./static/agent_chat.png" 
+          alt="image" 
+          style="width: 600px; height: auto;" 
+          loading="lazy"
+        />
+      </figure>
+    </div>
+    
+    <!-- 右侧图片 -->
+    <div class="column" style="text-align: center; width: 50%;">
+      <figure class="image" style="margin: 0 auto;">
+        <img 
+          src="./static/agent_embodied.png" 
+          alt="image" 
+          style="width: 600px; height: auto;" 
+          loading="lazy"
+        />
+      </figure>
+    </div>
+  </div>
+
+  <!-- 固定的 figcaption -->
+  <figcaption style="text-align: center; margin-top: 2rem;">
+    MLLM's performance on our benchmark with three reasoning settings. Base setting: without explicit safety reasoning. 1 step CoT: MLLMs reasoning the safety of user query and generating response at one step. Multi-agent: our designed multi-agent pipeline. The results show that the multi-agent pipeline improves performance in most cases.
+  </figcaption>
+</section>
+
+<!-- 固定布局的 BibTeX 部分 -->
+<section class="section" id="BibTeX">
+  <div class="container content" style="max-width: 800px; margin: 0 auto;">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
 
 
 <!-- <section class="section">
@@ -499,7 +559,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
         />
     </div> -->
     
-    <!-- 右侧图片 -->
+ 
 <!--     <div class="column is-half" style="text-align: center;">
       <figure class="image">
         <img 
@@ -517,7 +577,7 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
   </figcaption>
   </figure>
   </div>
-</section> --> 
+</section> 
 
 
 <section class="section" id="BibTeX">
