@@ -159,83 +159,8 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-<!--       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
-<!--       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2> -->
-    </div>
-  </div>
-</section>
-
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-<!--           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-chair-tp">
-<!--           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-shiba">
-<!--           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-fullbody"> -->
-<!--           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-blueshirt"> -->
-<!--           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-mask"> -->
-<!--           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-coffee"> -->
-<!--           <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-        <div class="item item-toby"> -->
-<!--           <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video> -->
-<!--         </div>
-      </div>
-    </div>
-  </div>
-</section>  -->
-
-
 <section class="section">
-  <figure class="image is-centered" style="width: 65%; margin: 0 auto 1rem;  text-align: center;">
+  <figure class="image is-centered" style="width: 70%; margin: 0 auto 1rem;  text-align: center;">
     <img 
       src="./static/fig1.png" 
       alt="image" 
@@ -243,7 +168,7 @@
       loading="lazy" 
     />
     <figcaption style="text-align: center;">
-      Figure 1. Illustration of multimodal situational safety. The model must judge the safety of the user's query or instruction based on the visual context and adjust their answer accordingly. Given an unsafe visual context, the model should remind the user of the potential risk instead of directly answering the user's query. However, current MLLMs struggle to achieve this in most unsafe situations.
+      Figure 1. We perform in-depth analysis on LRMs and find that (1) Safety SFT LRMs are vulnerable to jailbreaks like multi-turn attacks. (2) LRMs typically first understand the query, then proceed to think about how to answer. (3) Upper right: Safety aha-moment in the key sentence can lead to a safe response. (4) Bottom right: Based on the query understanding content (U), the SFT model can usually identify unsafe jailbreak queries explicitly, but not when responding to the query.
     </figcaption>
   </figure>
 </section>
@@ -255,12 +180,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           Multimodal Large Language Models (MLLMs) are rapidly evolving, demonstrating impressive capabilities as multimodal assistants that interact with both humans and their environments. However, this increased sophistication introduces significant safety concerns. In this paper, we present the first evaluation and analysis of a novel safety challenge termed Multimodal Situational Safety, which explores how safety considerations vary based on the specific situation in which the user or agent is engaged. 
-            We argue that for an MLLM to respond safely—whether through language or action—it often needs to assess the safety implications of a language query within its corresponding visual context. To evaluate this capability, we develop the Multimodal Situational Safety benchmark (MSSBench) to assess the situational safety performance of current MLLMs. 
-The dataset comprises 1,820 language query-image pairs, half of which the image context is safe, and the other half is unsafe. 
-We also develop an evaluation framework that analyzes key safety aspects, including explicit safety reasoning, visual understanding, and, crucially, situational safety reasoning. 
-Our findings reveal that current MLLMs struggle with this nuanced safety problem in the instruction-following setting and struggle to tackle these situational safety challenges all at once, highlighting a key area for future research. 
-Furthermore, we develop multi-agent pipelines to coordinately solve safety challenges, which shows consistent improvement in safety over the original MLLM response.
+           Large Reasoning Models (LRMs) introduce a new generation paradigm of explicitly reasoning before answering, leading to remarkable improvements in complex tasks. However, they pose great safety risks against harmful queries and adversarial attacks. 
+While recent mainstream safety efforts on LRMs, supervised fine-tuning (SFT), improve safety performance, we find that SFT-aligned models struggle to generalize to unseen jailbreak prompts. 
+            After thorough investigation of LRMs' generation, we identify a safety \emph{aha moment} that can activate safety reasoning and lead to a safe response. This aha moment typically appears in the `key sentence', which follows models' query understanding process and can indicate whether the model will proceed safely. 
+            Based on these insights, we propose SafeKey, including two complementary objectives to better activate the safety aha moment in the key sentence: (1) a Dual-Path Safety Head to enhance the safety signal in the model's internal representations before the key sentence, and (2) a Query-Mask Modeling objective to improve the models' attention on its query understanding, which has important safety hints. 
+            Experiments across multiple safety benchmarks demonstrate that our methods significantly improve safety generalization to a wide range of jailbreak attacks and out-of-distribution harmful prompts, lowering the average harmfulness rate by 9.6\%, while maintaining general abilities.
+            Our analysis reveals how SafeKey enhances safety by reshaping internal attention and improving the quality of hidden representations.
           </p>
         </div>
       </div>
@@ -269,80 +194,43 @@ Furthermore, we develop multi-agent pipelines to coordinately solve safety chall
 <!-- </section> -->
        <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column is-four-fifths">
-      <h2 class="title is-3">Dataset Overview</h2>
+      <h2 class="title is-3">The SafeKey Method</h2>
       </div>
       </div>
-        
- <section class="section">
-  <div class="columns is-centered" style="margin-bottom: 0.25rem;">
-    <!-- 左侧图片 -->
-    <div class="column is-half" style="text-align: center;">
-      <figure class="image">
-        <img 
-          src="./static/category.png" 
-          alt="image" 
-          style="width: 100%; height: auto;"  
-          loading="lazy"
-        />
-        <figcaption style="text-align: center;">
-          Figure 2. Presentation of MSSBench across four domains and ten secondary categories in Chat and Embodied tasks.
-      </figure>
-    </div>
-    
-    <!-- 右侧图片 -->
-    <div class="column is-half" style="text-align: center;">
-      <figure class="image">
-        <img 
-          src="./static/static.png" 
-          alt="image" 
-          style="width: 100%; height: auto;"  
-          loading="lazy"
-        />
-        <figcaption style="text-align: center;">
-          Figure 3. Data statistics for multimodal situational safety categories with percentages.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
 
+ <section class="section">
+  <figure class="image is-centered" style="width: 70%; margin: 0 auto 1rem;  text-align: center;">
+    <img 
+      src="./static/fig2.png" 
+      alt="image" 
+      style="width: 100%; height: auto;" 
+      loading="lazy" 
+    />
+    <figcaption style="text-align: center;">
+      Figure 2. The SafeKey framework: Dual-Path Safety Head contains two safety prediction heads H_1, H_2 that take last-layer hidden states on the early generation stage as input and predict the safety of the query. In Query-Mask Modeling, the LRM is trained to predict the key sentence K based on U with query X masked out for attention.
+      </figcaption>
+  </figure>
+</section>
 
 
 <div class="columns is-centered has-text-centered" style="margin-top: 0rem;">
   <div class="column is-four-fifths">
-    <h2 class="title is-3">Data Collection</h2>
+    <h2 class="title is-3">Results</h2>
   </div>
 </div>
-    
-<section class="section">
-  <div class="columns is-centered" style="margin-bottom: 0rem;">
-    <figure class="image" style="width: 100%;">
-      <div class="columns">
-        <!-- 左侧图片占 68% 宽度 -->
-        <div class="column is-8" style="text-align: center;">
-          <img 
-            src="./static/pipline_overall.png" 
-            alt="image" 
-            style="width: 100%; height: auto;" 
-            loading="lazy"
-          />
-        </div>
-        <!-- 右侧图片占 32% 宽度 -->
-        <div class="column is-4" style="text-align: center;">
-          <img 
-            src="./static/pipline_example.png" 
-            alt="image" 
-            style="width: 100%; height: auto;" 
-            loading="lazy"
-          />
-        </div>
-      </div>
-      <!-- 总的figcaption -->
-      <figcaption style="text-align: center;">
-        Figure 4. The overall structure of the chat data collection pipeline (left) and examples of two multimodal assistant scenarios (right). The pipeline includes four parts: (1) Generating Intented Activity and Unsafe Textual Situations. (2) Iterative Filtering with LLM. (3) Constructing a Multimodal Situational Safety Dataset via Image Retrieval. (4) Human Verification \& Query Generation. 
+
+ <section class="section">
+  <figure class="image is-centered" style="width: 70%; margin: 0 auto 1rem;  text-align: center;">
+    <img 
+      src="./static/fig3.png" 
+      alt="image" 
+      style="width: 100%; height: auto;" 
+      loading="lazy" 
+    />
+    <figcaption style="text-align: center;">
+      Table 1. Results of the R1-distilled LRMs (R1 Distilled), LRMs trained with supervised finetuning (SFT), and SafeKey on safety, overrefusal, and general ability datasets. SafeKey achieves more robust safety alignment for LRMs. 
       </figcaption>
-    </figure>
-  </div>
+  </figure>
 </section>
 
     
